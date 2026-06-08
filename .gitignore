@@ -1,0 +1,20 @@
+# Local .terraform directories (contains downloaded plugins/providers)
+**/.terraform/*
+
+# .tfstate files (Contains plain-text secrets and architecture data)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files (Local tweaks you don't want to share)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
