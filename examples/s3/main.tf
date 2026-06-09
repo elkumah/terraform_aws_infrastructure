@@ -23,5 +23,4 @@ output "bucket_id"                   { value = module.s3.bucket_id }
 output "bucket_arn"                  { value = module.s3.bucket_arn }
 output "bucket_domain_name"          { value = module.s3.bucket_domain_name }
 output "bucket_regional_domain_name" { value = module.s3.bucket_regional_domain_name }
-output "versioning_status"           { value = module.s3.versioning_status }
 output "bucket_website_endpoint"    { value = module.s3.bucket_website_endpoint }
