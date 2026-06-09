@@ -1,10 +1,11 @@
 # This module creates an EC2 instance with the latest Ubuntu 24.04 AMI.
 # Dynamically retrieves the latest Ubuntu 24.04 AMI using the aws_ami data source.
-data "aws_ami" "ubuntu_24_04" {
+data "aws_ami" "ubuntu" {
   most_recent = true
-  filter {
+  owners      = ["099720109477"] # Canonical's AWS account ID
+   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-24.04-amd64-server-*"]
+    values = ["ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*"]
   }
   filter {
     name   = "virtualization-type"
@@ -40,7 +41,7 @@ resource "aws_security_group" "ec2_sg" {
 }
 # Provision the EC2 instance using the retrieved AMI ID and provided variables.
 resource "aws_instance" "ec2_instance" {
-  ami                    = data.aws_ami.ubuntu_24_04.id
+  ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   key_name               = var.key_name
   user_data              = var.user_data

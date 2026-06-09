@@ -13,7 +13,7 @@ variable "subnet_id" {
 variable "instance_type" {
     description = "The type of EC2 instance to deploy"
     type = string
-    default = "t2.micro"
+    default = "t3.micro"
 }
 variable "key_name" {
     description = "The name of the SSH key pair to use for EC2 instances"

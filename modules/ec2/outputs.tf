@@ -16,7 +16,7 @@ output "security_group_id" {
 }
 output "ami_id" {
   description = "The ID of the AMI used for the EC2 instance."
-  value       = data.aws_ami.ubuntu_24_04.id
+  value       = data.aws_ami.ubuntu.id
 }
 output "instance_type" {
   description = "The type of the EC2 instance."
