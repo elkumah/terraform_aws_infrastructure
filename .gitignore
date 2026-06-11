@@ -28,3 +28,4 @@ secrets.tfvars
 # OS files
 .DS_Store
 Thumbs.db
+github-trust-policy.json
