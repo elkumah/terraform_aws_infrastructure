@@ -4,7 +4,8 @@
 # .tfstate files (Contains plain-text secrets and architecture data)
 *.tfstate
 *.tfstate.*
-
+*.tfplan
+tfplan
 # Crash logs
 crash.log
 crash.*.log
@@ -18,3 +19,12 @@ override.tf.json
 # CLI configuration files
 .terraformrc
 terraform.rc
+
+# Sensitive files
+*.pem
+*.key
+.env
+secrets.tfvars
+# OS files
+.DS_Store
+Thumbs.db

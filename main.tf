@@ -1,6 +1,6 @@
 # local variables are used to create a consistent naming convention for resources based on the project name and environment. The random_id resource is used to generate a unique suffix for the S3 bucket name to ensure it is globally unique. The EC2 instance is configured with user data to install and start an Apache web server, and the S3 bucket is configured with optional lifecycle rules and versioning based on input variables.
 locals {
-    project_name = "TerraformAWSInfra"
+    project_name = "terraform-aws-infra"
     environment = terraform.workspace
     prefix = "${var.project_name}-${local.environment}"
 }
